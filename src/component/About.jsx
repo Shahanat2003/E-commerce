@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import pic from '../Assets/image.webp'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function About() {
   return (
     <div>
+      
          <div className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 min-h-screen rounded-lg ">
         
         {/* Centered Heading with space from navbar */}

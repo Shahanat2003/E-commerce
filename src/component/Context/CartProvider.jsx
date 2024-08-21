@@ -6,6 +6,7 @@ function CartProvider({children}) {
   const [cartItems,setCartItems]=useState([])
   
   useEffect(()=>{
+    
     async function FetchCart() {
       const userId=localStorage.getItem("id")
       if(userId){

@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Contact() {
     const form = useRef();
@@ -23,7 +25,10 @@ function Contact() {
       toast.success("message send succesfuly")
   };
   return (
+    <div>
+     
     <div className="min-h-screen bg-gradient-to-r from-gray-400 to-gray-300 flex justify-center items-center p-6">
+      
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
         <form ref={form} onSubmit={sendEmail} className="space-y-4">
@@ -63,6 +68,9 @@ function Contact() {
           </div>
         </form>
       </div>
+     
+    </div>
+   
     </div>
   )
 }

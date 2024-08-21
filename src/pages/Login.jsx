@@ -19,13 +19,20 @@ function Login() {
       const user=response.data.find((use)=>use.email===loginValue.email)
 
       if(user){
-        if(user.password===loginValue.password){
+        if(user.blocked){
+          toast.warning("your account is blocked")
+        }
+        else if(user.password===loginValue.password){
           toast.success("login succesfully!");
           localStorage.setItem("id",user.id)
           localStorage.setItem("name",user.username)
-          
+          if(user.admin){
+            navigate('/admin/Dashboard')
+          }
+          else{
           navigate('/')
           window.location.reload()
+          }
         }
         else{
           validation.password="incorrect password"
@@ -38,6 +45,7 @@ function Login() {
         validation.password="incorrect password"
   
       }
+    
     }catch(error){
       toast.error("Errors:"+error)
     }

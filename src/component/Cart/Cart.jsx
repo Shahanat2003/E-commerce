@@ -3,6 +3,8 @@ import React, {  useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 
 
@@ -62,8 +64,10 @@ function Cart() {
   }
   
   return (
+    <div>
     
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 w-full'>
+     
      
         <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row md:justify-between md:space-x-4">
             {/* Cart Section */}
@@ -114,6 +118,9 @@ function Cart() {
                 </div>
             )}
         </div>
+        
+    </div>
+    
     </div>
 );
 }

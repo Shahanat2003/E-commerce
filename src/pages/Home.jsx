@@ -1,13 +1,18 @@
 import React from 'react'
 import main2 from '../Assets/pets2.png'
 import Product from '../component/Product';
+import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
 
 
 
 function Home() {
    
+   
   return (
-    <div className='bg-yellow-500 min-h-screen flex flex-col'>
+    
+    <div className='bg-yellow-500 min-h-screen flex flex-col '>
+        
     
     <div className='w-full h-20 bg-black flex justify-center items-center'>
         <h1 className='text-white text-3xl font-bold'>
@@ -33,6 +38,7 @@ function Home() {
 
 
    <Product/>
+   
       
     </div>
   )

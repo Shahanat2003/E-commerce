@@ -3,16 +3,21 @@
     {
       "id": "1",
       "name": "shahana",
-      "email": "shahana@123"
+      "email": "shahana@123",
+      "blocked": true,
+      "username": "abc"
     },
     {
       "id": "2",
       "name": "shahana",
-      "email": "shahana@123"
+      "email": "shahana@123",
+      "blocked": false,
+      "username": "abcd"
     },
     {
       "id": "2e4c",
       "username": "shahana",
+      "blocked": false,
       "email": "shahana@gmail.com",
       "password": "12345678",
       "cart": [
@@ -41,6 +46,19 @@
           "category": "Cat Treats",
           "product_type": "Cats",
           "quantity": 1
+        },
+        {
+          "id": "13",
+          "product_name": "Whiskas Kitten Wet Cat Food, Tuna in Jelly",
+          "old_price": 600,
+          "new_price": 522,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1_596d5657-0a5d-4018-b8d9-77bba479a330_1_1.jpg?v=1692353845",
+          "description": "Give your growing kitten the best start in life with Whiskas Kitten Wet Cat Food, specially designed for kittens aged 2 to 12 months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 1
         }
       ],
       "paymentDetails": {
@@ -52,6 +70,197 @@
         "Accno": "123456789098",
         "price": 26338
       }
+    },
+    {
+      "id": "f746",
+      "username": "shaana",
+      "email": "shaana@gmail.com",
+      "password": "12345678",
+      "cart": [
+        {
+          "id": "13",
+          "product_name": "Whiskas Kitten Wet Cat Food, Tuna in Jelly",
+          "old_price": 600,
+          "new_price": 522,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1_596d5657-0a5d-4018-b8d9-77bba479a330_1_1.jpg?v=1692353845",
+          "description": "Give your growing kitten the best start in life with Whiskas Kitten Wet Cat Food, specially designed for kittens aged 2 to 12 months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 1
+        },
+        {
+          "id": "7",
+          "product_name": "Pet Travel Carrier Bag",
+          "old_price": 1800,
+          "new_price": 1600,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYvZfb-GtYkrdjJdoie4xLdpL4Rl43dKm-A&s",
+          "description": "A durable and convenient carrier bag designed for traveling with pets. Ensures comfort and safety for your furry friend during trips.",
+          "rating": 4.3,
+          "stock_status": "In Stock",
+          "category": "Accessories",
+          "product_type": "Dogs",
+          "quantity": 1
+        },
+        {
+          "id": "21",
+          "product_name": "Cat Backpack Carrier with Bubble Window",
+          "old_price": 4000,
+          "new_price": 3500,
+          "image": "https://m.media-amazon.com/images/I/71fjGSuatgL._AC_UF350,350_QL80_.jpg",
+          "description": "A stylish backpack carrier with a bubble window, allowing your cat to see the world while traveling.",
+          "rating": 4.9,
+          "stock_status": "In Stock",
+          "category": "Cat Carriers",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ],
+      "admin": true,
+      "paymentDetails": {
+        "name": "shaaaaaaaaa",
+        "Addres": "123434",
+        "city": "aaaaaaaa",
+        "Phno": "1234567890",
+        "postalcode": "123",
+        "Accno": "123456789012",
+        "price": 522
+      },
+      "orders": [
+        {
+          "id": "6",
+          "product_name": "Cooling Gel Dog Bed",
+          "old_price": 2800,
+          "new_price": 2500,
+          "image": "https://i5.walmartimages.com/seo/FurHaven-Pet-Products-Faux-Sheepskin-Memory-Top-Snuggery-Burrow-Pet-Bed-for-Dogs-Cats-Gray-26-Base_9ee11da2-13d5-472a-9e85-b82ddb473d58.9e786c7026643fbb89b1791e9b6691a9.jpeg?odnHeight=50px&odnWidth=50px&odnBg=FFFFFF",
+          "description": "A comfortable dog bed infused with cooling gel to regulate your pet's body temperature during hot days. Provides a soothing and restful sleep for dogs of all sizes.",
+          "rating": 4.7,
+          "stock_status": "In Stock",
+          "category": "Bedding",
+          "product_type": "Dogs",
+          "quantity": 1
+        },
+        {
+          "id": "15",
+          "product_name": "Me-O Creamy Treats, Chicken & Liver",
+          "old_price": 300,
+          "new_price": 250,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame_344685029.png?v=1722327019",
+          "description": "Delicious and nutritious creamy treats for cats, enriched with Omega 3 and Taurine.",
+          "rating": 4.5,
+          "stock_status": "In Stock",
+          "category": "Cat Treats",
+          "product_type": "Cats",
+          "quantity": 1
+        },
+        {
+          "id": "13",
+          "product_name": "Whiskas Kitten Wet Cat Food, Tuna in Jelly",
+          "old_price": 600,
+          "new_price": 522,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1_596d5657-0a5d-4018-b8d9-77bba479a330_1_1.jpg?v=1692353845",
+          "description": "Give your growing kitten the best start in life with Whiskas Kitten Wet Cat Food, specially designed for kittens aged 2 to 12 months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ],
+      "blocked": false
+    },
+    {
+      "id": "ad1b",
+      "username": "shadha",
+      "email": "sh@gmail.com",
+      "password": "12345678",
+      "cart": [
+        {
+          "id": "19",
+          "product_name": "Heated Cat Bed",
+          "old_price": 3500,
+          "new_price": 3200,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmoy8WMpREMvN4FXfqvSp96dqeSqsvn1b6g&s",
+          "description": "A heated bed that keeps your cat warm and cozy, especially during colder months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Beds",
+          "product_type": "Cats",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "ed41",
+      "username": "shadha",
+      "email": "shadha@gamail.com",
+      "password": "12345678",
+      "cart": [
+        {
+          "id": "19",
+          "product_name": "Heated Cat Bed",
+          "old_price": 3500,
+          "new_price": 3200,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmoy8WMpREMvN4FXfqvSp96dqeSqsvn1b6g&s",
+          "description": "A heated bed that keeps your cat warm and cozy, especially during colder months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Beds",
+          "product_type": "Cats",
+          "quantity": 3
+        },
+        {
+          "id": "3",
+          "product_name": "Royal Canin Maxi Adult Dog Food",
+          "old_price": 6500,
+          "new_price": 6000,
+          "image": "https://supertails.com/cdn/shop/files/combo_4.png?v=1721828620",
+          "description": "Premium dog food designed for large breed adult dogs, offering optimal nutrition for maintaining joint health and a shiny coat. Tailored for dogs with high energy needs.",
+          "rating": 4.8,
+          "stock_status": "Out of Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 4
+        }
+      ],
+      "paymentDetails": {
+        "name": "shdha",
+        "Addres": "asd",
+        "city": "asd",
+        "Phno": "1234567890",
+        "postalcode": "123",
+        "Accno": "123456789087",
+        "price": 33600
+      },
+      "orders": [
+        {
+          "id": "19",
+          "product_name": "Heated Cat Bed",
+          "old_price": 3500,
+          "new_price": 3200,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOmoy8WMpREMvN4FXfqvSp96dqeSqsvn1b6g&s",
+          "description": "A heated bed that keeps your cat warm and cozy, especially during colder months.",
+          "rating": 4.8,
+          "stock_status": "In Stock",
+          "category": "Cat Beds",
+          "product_type": "Cats",
+          "quantity": 3
+        },
+        {
+          "id": "3",
+          "product_name": "Royal Canin Maxi Adult Dog Food",
+          "old_price": 6500,
+          "new_price": 6000,
+          "image": "https://supertails.com/cdn/shop/files/combo_4.png?v=1721828620",
+          "description": "Premium dog food designed for large breed adult dogs, offering optimal nutrition for maintaining joint health and a shiny coat. Tailored for dogs with high energy needs.",
+          "rating": 4.8,
+          "stock_status": "Out of Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 4
+        }
+      ]
     }
   ],
   "products": [
@@ -64,14 +273,14 @@
       "description": "A nutritious, protein-rich baked dry food crafted from premium chicken and eggs. Offers a delicious meal while promoting healthy digestion and strong muscles.",
       "rating": 4.5,
       "stock_status": "In Stock",
-      "category": "Dry Food",
+      "category": "Dryy",
       "product_type": "Dogs"
     },
     {
       "id": "2",
       "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
       "old_price": 1200,
-      "new_price": 1100,
+      "new_price": "1100",
       "image": "https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995&width=1100",
       "description": "Balanced dry dog food made with real chicken and vegetables, providing essential nutrients for adult dogs. Supports immune system health and keeps your dog energetic and active.",
       "rating": 4.2,
@@ -143,7 +352,7 @@
       "id": "8",
       "product_name": "Adjustable Dog Harness",
       "old_price": 800,
-      "new_price": 700,
+      "new_price": "80",
       "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSMkU5LoLBiaEtP2QWJBqag2Jmdanh8m9Y3w1DnOwETQA8_nq7-B-qObwRjPF6IQfluhtbzIJPrGuSX9bN92QLdzlStvmYlFpKhT5P-RrhM&usqp=CAc",
       "description": "An adjustable and comfortable dog harness that provides a secure fit and better control during walks. Perfect for dogs of various sizes.",
       "rating": 4.6,

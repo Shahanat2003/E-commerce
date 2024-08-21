@@ -1,37 +1,35 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export const AddCart = async (items) => {
+export const AddCart = async (items, setCartItems) => {
   const user = localStorage.getItem("id");
-  console.log(items)
-  // window.location.reload()  
-
+  
   if (user) {
     try {
       const res = await axios.get(`http://localhost:3001/user/${user}`);
       const currentCart = res.data.cart;
-     
-     
+
       const itemExists = currentCart.find(
         (cartItem) => cartItem.id === items.id
       );
       if (itemExists) {
-        toast.warning("item is already in cart");
-        // console.log(currentCart.length)
+        toast.warning("Item is already in cart");
       } else {
         const updateCart = [...currentCart, { ...items }];
         await axios.patch(`http://localhost:3001/user/${user}`, {
           cart: updateCart,
-        })
-        // console.log(currentCart.length)
-        toast.success("item succcesfuly added to cart"); 
-       
+        });
+        
+        
+        setCartItems(updateCart);
+        
+        toast.success("Item successfully added to cart");
       }
     } catch (error) {
-      toast.error("something went wrong");
+      toast.error("Something went wrong");
       console.log(error);
     }
   } else {
-    toast.warning("please login");
+    toast.warning("Please login");
   }
 };

@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Dogs() {
     const [dogProducts, setDogProducts] = useState([]);
@@ -23,6 +25,7 @@ function Dogs() {
    
   return (
     <div>
+       
           <div  className='p-6 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200'>
       <h1 className='text-3xl font-extrabold text-black mb-10'>Shop for Cats</h1>
           <div className='flex justify-center mb-6'>
@@ -51,8 +54,6 @@ function Dogs() {
           
     </div>
 
-
-      
     </div>
   )
 }
