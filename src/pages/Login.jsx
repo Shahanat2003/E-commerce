@@ -28,10 +28,11 @@ function Login() {
           localStorage.setItem("name",user.username)
           if(user.admin){
             navigate('/admin/Dashboard')
+            localStorage.setItem("admin",user.admin)
           }
           else{
           navigate('/')
-          window.location.reload()
+          // window.location.reload()
           }
         }
         else{

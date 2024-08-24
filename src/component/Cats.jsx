@@ -1,8 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from './Navbar';
-import Footer from './Footer';
+
 
 function Cats() {
     const [catProducts, setCatProducts] = useState([]);
@@ -29,8 +28,7 @@ function Cats() {
           <div  className='p-6 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200'>
       <h1 className='text-3xl font-extrabold text-black mb-10'>Shop for Cats</h1>
           <div className='flex justify-center mb-6'>
-            {/* <input type='text' placeholder='Search....' onChange={handleSearch} className='w-full py-2 px-4  border border-gray-300 rounded-lg shadow-sm'>
-            </input> */}
+           
           </div>
 
           <div>

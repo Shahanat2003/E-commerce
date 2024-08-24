@@ -1,4 +1,4 @@
-import { Routes,Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Login from './pages/Login';
 import Sign from './pages/Sign';
@@ -24,48 +24,57 @@ import Edit from './component/Admin/Edit';
 import UserDetailsPage from './component/Admin/UserDetailsPage';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
+import UserOrders from './component/UserOrders';
+
+
 
 
 function App() {
-  const location=useLocation();
-  const hideNavbar=location.pathname==='Login'||location.pathname==='Sign' || location.pathname.startsWith('/Admin')
+  const location = useLocation();
+  
+
+  const hideNavbar = location.pathname === '/Login' || 
+                    location.pathname === '/Sign' || 
+                    location.pathname.startsWith('/admin');
+  
+  
+
   return (
     <CartProvider>
-    <div className="App">
-      {!hideNavbar&&<Navbar/>}
-      <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='Login'element={<Login />} />
-      <Route path='Sign' element={<Sign />}/>
-      <Route path='Cats' element={<Cats/>}/>
-      <Route path='Dogs' element={<Dogs/>}/>
-      <Route path='About' element={<About/>}/>
-      <Route path='Contact' element={<Contact/>}/>
-      <Route path='Dogs/:id' element={<ProductDetails/>}/>
-      <Route path='Cats/:id' element={<ProductDetails/>}/>
-      <Route path='Cart' element={<Cart />}/>
-      <Route path='Chekout' element={<Chekout/>}/>
-      <Route path='SearchResult' element={<SearchResults/>}/>
-      
+      <div className="App">
+        {!hideNavbar && <Navbar />}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='Login' element={<Login />} />
+          <Route path='Sign' element={<Sign />} />
+          <Route path='Cats' element={<Cats />} />
+          <Route path='Dogs' element={<Dogs />} />
+          <Route path='About' element={<About />} />
+          <Route path='UserOrders' element={<UserOrders/>}/>
+          <Route path='Contact' element={<Contact />} />
+          <Route path='Dogs/:id' element={<ProductDetails />} />
+          <Route path='Cats/:id' element={<ProductDetails />} />
+          <Route path='Cart' element={<Cart />} />
+          <Route path='Chekout' element={<Chekout />} />
+          <Route path='SearchResult' element={<SearchResults />} />
 
-      {/* Admin */}
-      <Route path='Admin/' element={<Admin/>}>
-      <Route index element={<Dashboard/>}/>
-      <Route path='dashboard' element={<Dashboard/>}/>  
-      <Route path='all-users' element={<AllUsers/>}/>
-      <Route path='add-product' element={<AddProduct/>}/>
-      <Route path='edit-product' element={<EditProduct/>}/>
-      <Route path='orders' element={<Orders/>}/>
-      <Route path='edit-product/:id' element={<Edit/>}/>
-      <Route path='all-users/:id' element={<UserDetailsPage/>}/>
-      
-
-      </Route>
-      
-      </Routes>
-      {!hideNavbar&&<Footer/>}
-      <ToastContainer/>
-    </div>
+          {/* Admin */}
+          <Route path='/Admin/*' element={<Admin />}>
+            <Route index element={<Dashboard />} />
+            <Route path='dashboard' element={<Dashboard />} />
+            <Route path='all-users' element={<AllUsers />} />
+            <Route path='add-product' element={<AddProduct />} />
+            <Route path='edit-product' element={<EditProduct />} />
+            <Route path='orders' element={<Orders />} />
+            
+            <Route path='edit-product/:id' element={<Edit />} />
+            <Route path='all-users/:id' element={<UserDetailsPage />} />
+            
+          </Route>
+        </Routes>
+        {!hideNavbar && <Footer />}
+        <ToastContainer />
+      </div>
     </CartProvider>
   );
 }

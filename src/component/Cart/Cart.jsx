@@ -3,8 +3,7 @@ import React, {  useEffect, useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+
 
 
 
@@ -60,8 +59,10 @@ function Cart() {
   function handleCheckout(){
     const totalAmount = calCulateTotal();
     navigate('/Chekout',{state:{cartItem,totalAmount}})
+   
 
   }
+  
   
   return (
     <div>
@@ -70,7 +71,7 @@ function Cart() {
      
      
         <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row md:justify-between md:space-x-4">
-            {/* Cart Section */}
+           
 
             <div className="w-full md:w-2/3">
                 <h2 className="text-2xl font-semibold mb-4">Your Cart</h2>

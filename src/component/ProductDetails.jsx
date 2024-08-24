@@ -2,15 +2,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { AddCart } from './Cart/AddCart';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import { cartContext } from './Context/CartProvider';
-import { useContext } from 'react';
+
+
 
 function ProductDetails() {
     const{id}=useParams()
     const[data,setData]=useState();
-    const { setCartItems } = useContext(cartContext);
+    
     useEffect(()=>{
         async function FetchDetails(){
             try{
@@ -77,17 +75,17 @@ function ProductDetails() {
 
             <div class="flex space-x-4 mt-5">
             <button
-  onClick={() => AddCart({ ...data, quantity }, setCartItems)}
-  class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
->
-  Add to Cart
-</button>
+                  onClick={() => AddCart({ ...data, quantity })}
+                  class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Add to Cart
+                </button>
                 
               </div>
       </div>
       </div>
       </div>
-      <Footer/>
+     
     </div>
   )
 }

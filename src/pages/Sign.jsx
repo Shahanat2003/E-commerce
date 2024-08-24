@@ -26,26 +26,32 @@ function Sign() {
     }
 
     
-    function validate(){
-        const errors={};
-        if(!formValues.username)
-            errors.username="Username is required";
-        
-        if(!formValues.email)
-            errors.email="Email is required";
-        else if(!/\S+@\S+\.\S+/.test(formValues.email))
-            errors.email="Email is invalid"
-        
-        if(!formValues.password)
-            errors.password="Password is required";
-        else if(formValues.password.length<8){
-            errors.password="Password should contain 8 characters";
+    function validate() {
+        const errors = {};
+        const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+    
+        if (!formValues.username)
+            errors.username = "Username is required";
+    
+        if (!formValues.email)
+            errors.email = "Email is required";
+        else if (!/\S+@\S+\.\S+/.test(formValues.email))
+            errors.email = "Email is invalid";
+    
+        if (!formValues.password)
+            errors.password = "Password is required";
+        else if (formValues.password.length < 8) {
+            errors.password = "Password should contain at least 8 characters";
+        } else if (!specialCharacterRegex.test(formValues.password)) {
+            errors.password = "Password should contain at least one special character";
         }
-        if(formValues.password !== formValues.cnfrm_password)
-            errors.cnfrm_password="Password do not match"
-        setFormErrors(errors)
-        
-        return Object.keys(errors).length===0;
+    
+        if (formValues.password !== formValues.cnfrm_password)
+            errors.cnfrm_password = "Passwords do not match";
+    
+        setFormErrors(errors);
+    
+        return Object.keys(errors).length === 0;
     }
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 w-full absolute top-0 z-50">

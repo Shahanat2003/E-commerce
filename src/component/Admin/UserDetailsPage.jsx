@@ -31,7 +31,7 @@ function UserDetailsPage() {
                         <p><strong className="text-gray-600">Id:</strong> {userData.id}</p>
                         <p><strong className="text-gray-600">Username:</strong> {userData.username}</p>
                         <p><strong className="text-gray-600">Email:</strong> {userData.email}</p>
-                        <p><strong className="text-gray-600">Password:</strong> {userData.password}</p>
+                        {/* <p><strong className="text-gray-600">Password:</strong> {userData.password}</p> */}
                     </div>
                 </div>
 

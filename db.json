@@ -1,20 +1,6 @@
 {
   "user": [
     {
-      "id": "1",
-      "name": "shahana",
-      "email": "shahana@123",
-      "blocked": true,
-      "username": "abc"
-    },
-    {
-      "id": "2",
-      "name": "shahana",
-      "email": "shahana@123",
-      "blocked": false,
-      "username": "abcd"
-    },
-    {
       "id": "2e4c",
       "username": "shahana",
       "blocked": false,
@@ -22,32 +8,6 @@
       "password": "12345678",
       "cart": [
         {
-          "id": "18",
-          "product_name": "Cat Window Perch Bed",
-          "old_price": 2500,
-          "new_price": 2300,
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj2kTTF1EErxMk6NC-X66UtwfnsTNCjDk8LA&s",
-          "description": "A window-mounted perch bed that lets your cat enjoy the view while lounging comfortably.",
-          "rating": 4.7,
-          "stock_status": "Out of Stock",
-          "category": "Cat Beds",
-          "product_type": "Cats",
-          "quantity": 1
-        },
-        {
-          "id": "15",
-          "product_name": "Me-O Creamy Treats, Chicken & Liver",
-          "old_price": 300,
-          "new_price": 250,
-          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame_344685029.png?v=1722327019",
-          "description": "Delicious and nutritious creamy treats for cats, enriched with Omega 3 and Taurine.",
-          "rating": 4.5,
-          "stock_status": "In Stock",
-          "category": "Cat Treats",
-          "product_type": "Cats",
-          "quantity": 1
-        },
-        {
           "id": "13",
           "product_name": "Whiskas Kitten Wet Cat Food, Tuna in Jelly",
           "old_price": 600,
@@ -58,76 +18,8 @@
           "stock_status": "In Stock",
           "category": "Cat Food",
           "product_type": "Cats",
-          "quantity": 1
-        }
-      ],
-      "paymentDetails": {
-        "name": "shaana",
-        "Addres": "asads",
-        "city": "sas",
-        "Phno": "1234567890",
-        "postalcode": "123",
-        "Accno": "123456789098",
-        "price": 26338
-      }
-    },
-    {
-      "id": "f746",
-      "username": "shaana",
-      "email": "shaana@gmail.com",
-      "password": "12345678",
-      "cart": [
-        {
-          "id": "13",
-          "product_name": "Whiskas Kitten Wet Cat Food, Tuna in Jelly",
-          "old_price": 600,
-          "new_price": 522,
-          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1_596d5657-0a5d-4018-b8d9-77bba479a330_1_1.jpg?v=1692353845",
-          "description": "Give your growing kitten the best start in life with Whiskas Kitten Wet Cat Food, specially designed for kittens aged 2 to 12 months.",
-          "rating": 4.8,
-          "stock_status": "In Stock",
-          "category": "Cat Food",
-          "product_type": "Cats",
-          "quantity": 1
+          "quantity": 3
         },
-        {
-          "id": "7",
-          "product_name": "Pet Travel Carrier Bag",
-          "old_price": 1800,
-          "new_price": 1600,
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYvZfb-GtYkrdjJdoie4xLdpL4Rl43dKm-A&s",
-          "description": "A durable and convenient carrier bag designed for traveling with pets. Ensures comfort and safety for your furry friend during trips.",
-          "rating": 4.3,
-          "stock_status": "In Stock",
-          "category": "Accessories",
-          "product_type": "Dogs",
-          "quantity": 1
-        },
-        {
-          "id": "21",
-          "product_name": "Cat Backpack Carrier with Bubble Window",
-          "old_price": 4000,
-          "new_price": 3500,
-          "image": "https://m.media-amazon.com/images/I/71fjGSuatgL._AC_UF350,350_QL80_.jpg",
-          "description": "A stylish backpack carrier with a bubble window, allowing your cat to see the world while traveling.",
-          "rating": 4.9,
-          "stock_status": "In Stock",
-          "category": "Cat Carriers",
-          "product_type": "Cats",
-          "quantity": 1
-        }
-      ],
-      "admin": true,
-      "paymentDetails": {
-        "name": "shaaaaaaaaa",
-        "Addres": "123434",
-        "city": "aaaaaaaa",
-        "Phno": "1234567890",
-        "postalcode": "123",
-        "Accno": "123456789012",
-        "price": 522
-      },
-      "orders": [
         {
           "id": "6",
           "product_name": "Cooling Gel Dog Bed",
@@ -140,7 +32,18 @@
           "category": "Bedding",
           "product_type": "Dogs",
           "quantity": 1
-        },
+        }
+      ],
+      "paymentDetails": {
+        "name": "shaha",
+        "Addres": "T",
+        "city": "adf",
+        "Phno": "1234567890",
+        "postalcode": "123123456789",
+        "Accno": "123456789098",
+        "price": 8572
+      },
+      "orders": [
         {
           "id": "15",
           "product_name": "Me-O Creamy Treats, Chicken & Liver",
@@ -166,16 +69,20 @@
           "category": "Cat Food",
           "product_type": "Cats",
           "quantity": 1
-        }
-      ],
-      "blocked": false
-    },
-    {
-      "id": "ad1b",
-      "username": "shadha",
-      "email": "sh@gmail.com",
-      "password": "12345678",
-      "cart": [
+        },
+        {
+          "id": "18",
+          "product_name": "Cat Window Perch Bed",
+          "old_price": 2500,
+          "new_price": 2300,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj2kTTF1EErxMk6NC-X66UtwfnsTNCjDk8LA&s",
+          "description": "A window-mounted perch bed that lets your cat enjoy the view while lounging comfortably.",
+          "rating": 4.7,
+          "stock_status": "Out of Stock",
+          "category": "Cat Beds",
+          "product_type": "Cats",
+          "quantity": 2
+        },
         {
           "id": "19",
           "product_name": "Heated Cat Bed",
@@ -187,9 +94,26 @@
           "stock_status": "In Stock",
           "category": "Cat Beds",
           "product_type": "Cats",
-          "quantity": 3
+          "quantity": 1
         }
       ]
+    },
+    {
+      "id": "f746",
+      "username": "shaana",
+      "email": "shaana@gmail.com",
+      "password": "12345678",
+      "cart": [],
+      "admin": true,
+      "paymentDetails": {
+        "name": "shaaaaaaaaa",
+        "Addres": "123434",
+        "city": "aaaaaaaa",
+        "Phno": "1234567890",
+        "postalcode": "123",
+        "Accno": "123456789012",
+        "price": 522
+      }
     },
     {
       "id": "ed41",
@@ -222,6 +146,32 @@
           "category": "Dry Food",
           "product_type": "Dogs",
           "quantity": 4
+        },
+        {
+          "id": "15",
+          "product_name": "Me-O Creamy Treats, Chicken & Liver",
+          "old_price": 300,
+          "new_price": 250,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame_344685029.png?v=1722327019",
+          "description": "Delicious and nutritious creamy treats for cats, enriched with Omega 3 and Taurine.",
+          "rating": 4.5,
+          "stock_status": "In Stock",
+          "category": "Cat Treats",
+          "product_type": "Cats",
+          "quantity": 1
+        },
+        {
+          "id": "17",
+          "product_name": "Scratching Post with Toy Ball",
+          "old_price": 1500,
+          "new_price": 1300,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame12532.png?v=1698735731",
+          "description": "A sturdy scratching post with a dangling toy ball, perfect for keeping your cat entertained and their claws healthy.",
+          "rating": 4.6,
+          "stock_status": "In Stock",
+          "category": "Cat Toys",
+          "product_type": "Cats",
+          "quantity": 1
         }
       ],
       "paymentDetails": {
@@ -261,21 +211,191 @@
           "quantity": 4
         }
       ]
+    },
+    {
+      "id": "8173",
+      "username": "suhaila",
+      "email": "suhaila@gmail.com",
+      "password": "12345678",
+      "cart": [
+        {
+          "id": "14",
+          "product_name": "Royal Canin Indoor Adult Dry Cat Food",
+          "old_price": 1200,
+          "new_price": 1100,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1-2022-04-23T121624.674_1.png?v=1696601905",
+          "description": "A complete and balanced diet for adult indoor cats, promoting healthy digestion and maintaining ideal weight.",
+          "rating": 4.7,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 3
+        },
+        {
+          "id": "21",
+          "product_name": "Cat Backpack Carrier with Bubble Window",
+          "old_price": 4000,
+          "new_price": 3500,
+          "image": "https://m.media-amazon.com/images/I/71fjGSuatgL._AC_UF350,350_QL80_.jpg",
+          "description": "A stylish backpack carrier with a bubble window, allowing your cat to see the world while traveling.",
+          "rating": 4.9,
+          "stock_status": "In Stock",
+          "category": "Cat Carriers",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ],
+      "paymentDetails": {
+        "name": "suhaila",
+        "Addres": "T",
+        "city": "adf",
+        "Phno": "0123456789",
+        "postalcode": "123123456789",
+        "Accno": "123456789098",
+        "price": 6800
+      },
+      "orders": [
+        {
+          "id": "14",
+          "product_name": "Royal Canin Indoor Adult Dry Cat Food",
+          "old_price": 1200,
+          "new_price": 1100,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1-2022-04-23T121624.674_1.png?v=1696601905",
+          "description": "A complete and balanced diet for adult indoor cats, promoting healthy digestion and maintaining ideal weight.",
+          "rating": 4.7,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 3
+        },
+        {
+          "id": "21",
+          "product_name": "Cat Backpack Carrier with Bubble Window",
+          "old_price": 4000,
+          "new_price": 3500,
+          "image": "https://m.media-amazon.com/images/I/71fjGSuatgL._AC_UF350,350_QL80_.jpg",
+          "description": "A stylish backpack carrier with a bubble window, allowing your cat to see the world while traveling.",
+          "rating": 4.9,
+          "stock_status": "In Stock",
+          "category": "Cat Carriers",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ],
+      "blocked": true
+    },
+    {
+      "id": "3ba8",
+      "username": "shaman",
+      "email": "shamna@gmail.com",
+      "password": "12345678*",
+      "cart": []
+    },
+    {
+      "id": "be8a",
+      "username": "sabith",
+      "email": "sabith@gmail.com",
+      "password": "12345678*",
+      "cart": [
+        {
+          "id": "2",
+          "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
+          "old_price": 1200,
+          "new_price": "1100",
+          "image": "https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995&width=1100",
+          "description": "Balanced dry dog food made with real chicken and vegetables, providing essential nutrients for adult dogs. Supports immune system health and keeps your dog energetic and active.",
+          "rating": 4.2,
+          "stock_status": "In Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 3
+        }
+      ],
+      "paymentDetails": {
+        "name": "sabith",
+        "Addres": "kk",
+        "city": "abc",
+        "Phno": "0123456789",
+        "postalcode": "123",
+        "Accno": "123456789098",
+        "price": 3300
+      },
+      "orders": [
+        {
+          "id": "2",
+          "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
+          "old_price": 1200,
+          "new_price": "1100",
+          "image": "https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995&width=1100",
+          "description": "Balanced dry dog food made with real chicken and vegetables, providing essential nutrients for adult dogs. Supports immune system health and keeps your dog energetic and active.",
+          "rating": 4.2,
+          "stock_status": "In Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "4f3d",
+      "username": "salman",
+      "email": "salman@gmail.com",
+      "password": "12345678*",
+      "cart": [
+        {
+          "id": "15",
+          "product_name": "Me-O Creamy Treats, Chicken & Liver",
+          "old_price": 300,
+          "new_price": 250,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame_344685029.png?v=1722327019",
+          "description": "Delicious and nutritious creamy treats for cats, enriched with Omega 3 and Taurine.",
+          "rating": 4.5,
+          "stock_status": "In Stock",
+          "category": "Cat Treats",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ],
+      "paymentDetails": {
+        "name": "salman",
+        "Addres": "kk",
+        "city": "abc",
+        "Phno": "0123456789",
+        "postalcode": "123",
+        "Accno": "123456789091",
+        "price": 250
+      },
+      "orders": [
+        {
+          "id": "14",
+          "product_name": "Royal Canin Indoor Adult Dry Cat Food",
+          "old_price": 1200,
+          "new_price": 1100,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/products/Frame1-2022-04-23T121624.674_1.png?v=1696601905",
+          "description": "A complete and balanced diet for adult indoor cats, promoting healthy digestion and maintaining ideal weight.",
+          "rating": 4.7,
+          "stock_status": "In Stock",
+          "category": "Cat Food",
+          "product_type": "Cats",
+          "quantity": 1
+        },
+        {
+          "id": "15",
+          "product_name": "Me-O Creamy Treats, Chicken & Liver",
+          "old_price": 300,
+          "new_price": 250,
+          "image": "https://cdn.shopify.com/s/files/1/0565/8021/0861/files/Frame_344685029.png?v=1722327019",
+          "description": "Delicious and nutritious creamy treats for cats, enriched with Omega 3 and Taurine.",
+          "rating": 4.5,
+          "stock_status": "In Stock",
+          "category": "Cat Treats",
+          "product_type": "Cats",
+          "quantity": 1
+        }
+      ]
     }
   ],
   "products": [
-    {
-      "id": "1",
-      "product_name": "Henlo Chicken and Egg Baked Dry Food for Adult Dogs",
-      "old_price": 2350,
-      "new_price": 1975,
-      "image": "https://supertails.com/cdn/shop/files/Frame344684061.png?v=1716471027",
-      "description": "A nutritious, protein-rich baked dry food crafted from premium chicken and eggs. Offers a delicious meal while promoting healthy digestion and strong muscles.",
-      "rating": 4.5,
-      "stock_status": "In Stock",
-      "category": "Dryy",
-      "product_type": "Dogs"
-    },
     {
       "id": "2",
       "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
