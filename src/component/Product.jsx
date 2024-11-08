@@ -1,31 +1,33 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink ,Link} from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { fetchProducts } from '../Redux/ReduxSlice/ProductSlice';
 
 
 function Product() {
-  const [catProducts, setCatProducts] = useState([]);
-  const [dogProducts, setDogProducts] = useState([]);
-
+  const dispatch = useDispatch();
+  const catProducts = useSelector((state) => state.product.catProducts);
+  const dogProducts = useSelector((state) => state.product.dogProducts);
+  const status = useSelector((state) => state.product.status);
+  const error = useSelector((state) => state.product.error);
+  // console.log(catProducts)
   useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const res = await axios.get("http://localhost:3001/products");
-        const filteredDogProduct = res.data.filter(
-          (data) => data.product_type === "Dogs"
-        );
-        const filteredCatProduct = res.data.filter(
-          (data) => data.product_type === "Cats"
-        );
-        setCatProducts(filteredCatProduct);
-        setDogProducts(filteredDogProduct);
-      } catch (error) {
-        console.log("errorr fetching products:", error);
-      }
+    if (status === 'idle') {
+      dispatch(fetchProducts());
     }
-    fetchProducts();
-  }, []);
+  }, [status, dispatch]);
+ 
+
+  if (status === 'loading') {
+    return <p>Loading...</p>;
+  }
+
+  if (status === 'failed') {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <div>
       {/* product of cats */}
@@ -37,10 +39,10 @@ function Product() {
                 {catProducts.slice(0,7).map(products=>(
                     <Link to={`/Cats/${products.id}`}>
                      <li key={products.id} className='border rounded-lg overflow-hidden shadow-lg bg-white transform transition-transform  hover:scale-105 hover:shadow-2xl'>
-                        <img src={products.image} alt={products.product_name} className='w-full h-100 object-cover'/>
-                        <h2 className='text-xl font-semibold text-black mb-2'>{products.product_name}</h2>
-                        <p className='text-gray-700 mb-1'>New Price:$ {products.new_price}</p>
-                        <p className='text-gray-500 mb-1'>New Price:$ {products.old_price}</p>
+                        <img src={products.img} alt={products.name} className='w-full h-100 object-cover'/>
+                        <h2 className='text-xl font-semibold text-black mb-2'>{products.name}</h2>
+                        <p className='text-gray-700 mb-1'>New Price:$ {products.newPrice}</p>
+                        <p className='text-gray-500 mb-1'>New Price:$ {products.oldPrice}</p>
                     </li>
                     </Link>
 
@@ -66,10 +68,10 @@ function Product() {
                   
                   <Link to={`/Dogs/${products.id}`}>
                      <li key={products.id} className='border rounded-lg overflow-hidden shadow-lg bg-white transform transition-transform  hover:scale-105 hover:shadow-2xl'>
-                        <img src={products.image} alt={products.product}  className='w-full h-100 object-cover'/>
-                        <h2 className='text-xl font-semibold text-black mb-2'>{products.product}</h2>
-                        <p className='text-gray-700 mb-1'>New Price:${products.new_price}</p>
-                        <p className='text-gray-500 mb-1'>New Price:${products.old_price}</p>
+                        <img src={products.img} alt={products.name}  className='w-full h-100 object-cover'/>
+                        <h2 className='text-xl font-semibold text-black mb-2'>{products.name}</h2>
+                        <p className='text-gray-700 mb-1'>New Price:${products.newPrice}</p>
+                        <p className='text-gray-500 mb-1'>New Price:${products.oldPrice}</p>
                         
                     </li>
                      </Link>
@@ -84,26 +86,9 @@ function Product() {
                     </li>
             </ul>
         </div>
-        
-        
-      
+    
     </div>
 
-
-
-
-
-
-      {/* <ul>
-        {catProducts.slice(0, 5).map((v) => (
-          <li>{v.product_name}</li>
-        ))}
-      </ul>
-      <ul>
-        {dogProducts.slice(0, 5).map((v) => (
-          <li>{v.product_name}</li>
-        ))}
-      </ul> */}
     </div>
     </div>
   );

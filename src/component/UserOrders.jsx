@@ -8,8 +8,13 @@ function UserOrders() {
   useEffect(() => {
     async function FetchOrders() {
       try {
-        const res = await axios.get(`http://localhost:3001/user/${id}`);
-        setItem(res.data.orders||[]);
+        const res = await axios.get(`https://localhost:7199/api/Order/GetOrders?userId=${id}`,{
+          headers:{
+            Authorization:`Bearer ${localStorage.getItem("token")}`
+          }
+        });
+        setItem(res.data||[]);
+        console.log(res)
       } catch (error) {
         console.log("error fetching order", error);
       }
@@ -31,13 +36,13 @@ function UserOrders() {
             </tr>
           </thead>
           <tbody>
-            {item.map((data) => (
+            {item&&item.map((data) => (
               <tr key={data.id}>
-                <td className="py-2 px-4 border-b">{data.product_name}</td>
+                <td className="py-2 px-4 border-b">{data.product_Name}</td>
                 <td className="py-2 px-4 border-b">
-                  <img src={data.image} alt={data.product_name} className="w-16 h-auto" />
+                  <img src={data.image} alt={data.product_Name} className="w-16 h-auto" />
                 </td>
-                <td className="py-2 px-4 border-b">{data.new_price}</td>
+                <td className="py-2 px-4 border-b">{data.totalPrice}</td>
                 <td className="py-2 px-4 border-b">{data.quantity}</td>
               </tr>
             ))}

@@ -10,10 +10,21 @@ function CartProvider({ children }) {
     const userId = localStorage.getItem("id");
     if (userId) {
       try {
-        const res = await axios.get(`http://localhost:3001/user/${userId}`);
-        setCartItems(res.data.cart);
+        const res = await axios.get("https://localhost:7199/api/Cart",{
+          headers:{
+            Authorization:`Bearer ${localStorage.getItem}`
+          }
+          
+        });
+        // console.log(res)
+        if (res.data) { 
+          setCartItems(res.data);
+        } else {
+          setCartItems([]); 
+        }
       } catch (error) {
         console.error("Failed to fetch cart items", error);
+        setCartItems([]); 
       }
     }
   }

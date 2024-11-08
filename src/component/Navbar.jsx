@@ -4,11 +4,25 @@ import { FaShoppingCart, FaBars } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { fetchCartItems } from '../Redux/ReduxSlice/AddtoCartSlice';
+import { useSelector,useDispatch } from 'react-redux';
 import { cartContext } from './Context/CartProvider';
 
 function Navbar() {
-  const { cartItems, FetchCart } = useContext(cartContext);
-  const cartCount = cartItems.length;
+
+  const dispatch=useDispatch()
+  const cartItems=useSelector((state)=>state. addCart.items)
+  const cartLength=cartItems.length;
+  
+  // const { cartItems, FetchCart } = useContext(cartContext);
+  // const cartCount = cartItems.length;
+  // console.log(cartItems)
+
+
+  useEffect(()=>{
+dispatch(fetchCartItems())
+  },[dispatch])
+  // console.log(cartItems.length);
   
 
   const [isLoggin, setIsLoggin] = useState(false);
@@ -23,12 +37,12 @@ function Navbar() {
   useEffect(() => {
     if (localStorage.getItem("id")) {
       setIsLoggin(true);
-      FetchCart(); 
+      // FetchCart(); 
     } else {
       setIsLoggin(false);
     }
-  }, [FetchCart]); // Add FetchCart to dependencies
-// 
+  }, []); // Add FetchCart to dependencies
+
   // console.log(cartCount);
   
   
@@ -50,7 +64,7 @@ function Navbar() {
 
   async function handleSearch(e) {
     const query = e.target.value;
-    setSearchQuery(query);
+    
     if (!query) {
       navigate('/');
       return;
@@ -58,12 +72,18 @@ function Navbar() {
     e.preventDefault();
 
     try {
-      const result = await axios.get("http://localhost:3001/products");
+      const result = await axios.get(`https://localhost:7199/api/Product/search?search=${query}`,{
+        headers:{
+        Authorization:`Bearer ${localStorage.getItem("token")}`
+        }
+      });
+      
       const combinedResult = result.data;
-      const filteredResult = combinedResult.filter((item) =>
-        item.product_name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      navigate('/SearchResult', { state: { results: filteredResult } });
+      // const filteredResult = combinedResult.filter((item) =>
+      //   item.product_name.toLowerCase().includes(searchQuery.toLowerCase())
+      // );
+      console.log(combinedResult)
+      navigate('/SearchResult', { state: { results: combinedResult } });
     } catch (error) {
       console.log(error);
     }
@@ -133,10 +153,19 @@ function Navbar() {
               Orders
             </NavLink>
 
+            <NavLink 
+              to="/Wishlist" 
+              className={({ isActive }) => 
+                `text-black font-semibold hover:text-green-700 transition-colors ${isActive ? 'border-b-2 border-green-700' : ''} md:mb-0 mb-2`
+              }
+            >
+              Wishlist
+            </NavLink>
+
             <NavLink to='/cart' className={({ isActive }) => `relative text-black font-semibold hover:text-gray-400 transition-colors ${isActive ? 'border-b-2 border-green-700' : ''} md:mb-0 mb-2`}>
               <FaShoppingCart className='h-5 w-5'/>
               <p className='absolute top-0 right-0 bg-red-500 text-white rounded-full w-3 h-3  flex items-center justify-center text-xs'>
-                {cartCount}
+                {cartLength}
               </p>
             </NavLink>
 

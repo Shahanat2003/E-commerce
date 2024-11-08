@@ -25,6 +25,8 @@ import UserDetailsPage from './component/Admin/UserDetailsPage';
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
 import UserOrders from './component/UserOrders';
+import ProductDetailsOfAdmin from './component/Admin/ProductDetailsOfAdmin';
+import Wishlist from './component/Wishlist';
 
 
 
@@ -57,6 +59,7 @@ function App() {
           <Route path='Cart' element={<Cart />} />
           <Route path='Chekout' element={<Chekout />} />
           <Route path='SearchResult' element={<SearchResults />} />
+          <Route path='Wishlist' element={<Wishlist/>}/>
 
           {/* Admin */}
           <Route path='/Admin/*' element={<Admin />}>
@@ -69,6 +72,7 @@ function App() {
             
             <Route path='edit-product/:id' element={<Edit />} />
             <Route path='all-users/:id' element={<UserDetailsPage />} />
+            <Route path='edit-product/product/:id'element={<ProductDetailsOfAdmin/>}/>
             
           </Route>
         </Routes>

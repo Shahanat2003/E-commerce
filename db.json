@@ -393,6 +393,82 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "id": "760d",
+      "username": "dev",
+      "email": "dev@bridgeon.in",
+      "password": "dev@2024",
+      "cart": [
+        {
+          "id": "2",
+          "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
+          "old_price": 1200,
+          "new_price": "1100",
+          "image": "https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995&width=1100",
+          "description": "Balanced dry dog food made with real chicken and vegetables, providing essential nutrients for adult dogs. Supports immune system health and keeps your dog energetic and active.",
+          "rating": 4.2,
+          "stock_status": "In Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 3
+        }
+      ],
+      "paymentDetails": {
+        "name": "qwerty",
+        "Addres": "erty",
+        "city": "fgh",
+        "Phno": "0123456789",
+        "postalcode": "123123456789",
+        "Accno": "123456789976",
+        "price": 3300
+      },
+      "orders": [
+        {
+          "id": "2",
+          "product_name": "Pedigree Adult Dry Dog Food, Chicken & Vegetables",
+          "old_price": 1200,
+          "new_price": "1100",
+          "image": "https://headsupfortails.com/cdn/shop/files/8906002482832.jpg?v=1715947995&width=1100",
+          "description": "Balanced dry dog food made with real chicken and vegetables, providing essential nutrients for adult dogs. Supports immune system health and keeps your dog energetic and active.",
+          "rating": 4.2,
+          "stock_status": "In Stock",
+          "category": "Dry Food",
+          "product_type": "Dogs",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "845a",
+      "username": "mohan",
+      "email": "mohan@gmail.com",
+      "password": "M12345678*"
+    },
+    {
+      "id": "7148",
+      "email": "mohann@gmail.com",
+      "password": "12345678*"
+    },
+    {
+      "id": "01fe",
+      "email": "mohann@gmail.com",
+      "password": "12345678*"
+    },
+    {
+      "id": "ffca",
+      "email": "dev@bridgeon.in",
+      "password": "dev@2024"
+    },
+    {
+      "id": "9d22",
+      "email": "mohann@gmail.com",
+      "password": "12345678*"
+    },
+    {
+      "id": "6b3d",
+      "email": "mohann@gmail.com",
+      "password": "12345678*"
     }
   ],
   "products": [

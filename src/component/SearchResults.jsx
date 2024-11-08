@@ -7,8 +7,13 @@ function SearchResults() {
     const { results } = state
     const navigate = useNavigate()
     function handleClick(item){
-      navigate(`/${item.product_type}/${item.id}`)
+        if(item.category=="5"){
+            navigate(`/Cats/${item.id}`)
+        }
+      
+    else if(item.category=="6")
 
+        navigate(`/Dogs/${item.id}`)
     }
 
 
@@ -25,13 +30,13 @@ function SearchResults() {
             >
                 <img
                     alt={item.name}
-                    src={item.image}
+                    src={item.img}
                     className="w-full h-48 object-cover rounded-t-lg"
                 />
                 <div className="p-4">
-                    <h2 className="text-xl font-semibold mb-2">{item.product_name}</h2>
+                    <h2 className="text-xl font-semibold mb-2">{item.name}</h2>
                     <p className="text-gray-600 mb-4">{item.description}</p>
-                    <h2 className="text-xl font-semibold mb-2">${item.new_price}</h2>
+                    <h2 className="text-xl font-semibold mb-2">${item.newPrice}</h2>
                     <button
                         onClick={() => handleClick(item)}
                         className="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"

@@ -1,102 +1,239 @@
-import React, { useState} from 'react'
-import { useNavigate,Link } from 'react-router-dom';
-import axios from 'axios'
+// import React, { useState} from 'react'
+// import { useNavigate,Link } from 'react-router-dom';
+// import axios from 'axios'
 
-function Sign() {
+// function Sign() {
     
-    const navigate=useNavigate()
-    const initialValue={username:"",email:"",password:"",cnfrm_password:"",cart:[]};
-    const[formValues,setFormValues]=useState(initialValue)
-    const[formErrors,setFormErrors]=useState({})
+//     const navigate=useNavigate()
+//     const initialValue={username:"",email:"",password:"",cnfrm_password:"",cart:[]};
+//     const[formValues,setFormValues]=useState(initialValue)
+//     const[formErrors,setFormErrors]=useState({})
     
-    function handleChange(e){
-        const{name,value}=e.target;
+//     function handleChange(e){
+//         const{name,value}=e.target;
         
-        setFormValues({...formValues,[name]:value})
-    }
-    function handleSubmit(e){
-        e.preventDefault()
+//         setFormValues({...formValues,[name]:value})
+//     }
+//     function handleSubmit(e){
+//         e.preventDefault()
        
         
-        if(validate()){
-            navigate('/Login')
-            const {cnfrm_password,...newFormValues}=formValues
-            axios.post("http://localhost:3001/user",newFormValues)
-        } 
-    }
+//         if(validate()){
+//             navigate('/Login')
+//             const {cnfrm_password,...newFormValues}=formValues
+//             axios.post("http://localhost:3001/user",newFormValues)
+//         } 
+//     }
 
     
-    function validate() {
-        const errors = {};
-        const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+//     function validate() {
+//         const errors = {};
+//         const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
     
-        if (!formValues.username)
-            errors.username = "Username is required";
+//         if (!formValues.username)
+//             errors.username = "Username is required";
     
-        if (!formValues.email)
-            errors.email = "Email is required";
-        else if (!/\S+@\S+\.\S+/.test(formValues.email))
-            errors.email = "Email is invalid";
+//         if (!formValues.email)
+//             errors.email = "Email is required";
+//         else if (!/\S+@\S+\.\S+/.test(formValues.email))
+//             errors.email = "Email is invalid";
     
-        if (!formValues.password)
-            errors.password = "Password is required";
-        else if (formValues.password.length < 8) {
-            errors.password = "Password should contain at least 8 characters";
-        } else if (!specialCharacterRegex.test(formValues.password)) {
-            errors.password = "Password should contain at least one special character";
+//         if (!formValues.password)
+//             errors.password = "Password is required";
+//         else if (formValues.password.length < 8) {
+//             errors.password = "Password should contain at least 8 characters";
+//         } else if (!specialCharacterRegex.test(formValues.password)) {
+//             errors.password = "Password should contain at least one special character";
+//         }
+    
+//         if (formValues.password !== formValues.cnfrm_password)
+//             errors.cnfrm_password = "Passwords do not match";
+    
+//         setFormErrors(errors);
+    
+//         return Object.keys(errors).length === 0;
+//     }
+//   return (
+//     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 w-full absolute top-0 z-50">
+//         <div className='w-full max-w-md p-8 bg-white rounded-lg shadow-md'>
+//         <h2 class="text-2xl font-bold mb-6 text-center">SignUp</h2>
+//         <form onSubmit={handleSubmit}>
+//         <div >
+//         <label for ="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+//         <input type='text' id="username" name="username" value={formValues.username} onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
+//         {formErrors.username&&(
+//             <p className='text-red-500 text-sm mt-1'>{formErrors.username}</p>
+//         )}
+//       </div>
+//         <div >
+//         <label for ="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+//         <input type='email' id="email" name="email" value={formValues.email} onChange={handleChange} class='border border-gray-300 w-full outline-none focus:ring-2 focus:ring-gray-500 p-2 rounded-md'></input>
+//         {formErrors.email&&(
+//             <p className='text-red-500 text-sm mt-1'>{formErrors.email}</p>
+//         )}
+//       </div>
+//       <div>
+//         <labell for='password'class='block text-gray-700 text-sm font-bold mb-2'> Password:</labell>
+//         <input type='password' id="password" name="password" value={formValues.password} onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
+//         {formErrors.password&&(
+//             <p className='text-red-500 text-sm mt-1'>{formErrors.password}</p>
+//         )}
+//       </div>
+//       <div>
+//         <labell for='cnfrm_password'class='block text-gray-700 text-sm font-bold mb-2'>Confirm Password:</labell>
+//         <input type='password' id="cnfrm_password" name="cnfrm_password" value={formValues.cnfrm_password}  onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
+//         {formErrors.cnfrm_password&&(
+//             <p className='text-red-500 text-sm mt-1'>{formErrors.cnfrm_password}</p>
+//         )}
+//       </div>
+//       <button type='submit' class="w-full bg-green-400 text-white py-3 rounded-md mt-5 hover:bg-green-600">SignUp</button>
+
+//         </form>
+//         <p class="mt-4 text-center text-sm text-gray-600">
+//             Already have an account?
+//             <Link to='/Login' className='text-blue-600 hover:underline'>Login</Link>
+//         </p>
+//         </div>
+    
+//     </div>
+//   )
+// }
+
+// export default Sign
+
+
+
+
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate,Link } from 'react-router-dom';
+import { signupUser } from '../Redux/ReduxSlice/SignSlice';
+import { toast } from 'react-toastify';
+
+function Sign() {
+  const dispatch = useDispatch();
+  const navigate=useNavigate();
+  const { loading, error } = useSelector((state) => state.signUp);
+  const initialValue = { username: '', email: '', password: '', cnfrm_password: '', cart: [] };
+  const [formValues, setFormValues] = useState(initialValue);
+  const [formErrors, setFormErrors] = useState({});
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (validate()) {
+        if(error){
+            toast.error(error)
         }
-    
-        if (formValues.password !== formValues.cnfrm_password)
-            errors.cnfrm_password = "Passwords do not match";
-    
-        setFormErrors(errors);
-    
-        return Object.keys(errors).length === 0;
+        navigate('/Login')
+      const { cnfrm_password, ...newFormValues } = formValues;
+      dispatch(signupUser(newFormValues));
     }
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 w-full absolute top-0 z-50">
-        <div className='w-full max-w-md p-8 bg-white rounded-lg shadow-md'>
-        <h2 class="text-2xl font-bold mb-6 text-center">SignUp</h2>
-        <form onSubmit={handleSubmit}>
-        <div >
-        <label for ="username" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
-        <input type='text' id="username" name="username" value={formValues.username} onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
-        {formErrors.username&&(
-            <p className='text-red-500 text-sm mt-1'>{formErrors.username}</p>
-        )}
-      </div>
-        <div >
-        <label for ="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-        <input type='email' id="email" name="email" value={formValues.email} onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
-        {formErrors.email&&(
-            <p className='text-red-500 text-sm mt-1'>{formErrors.email}</p>
-        )}
-      </div>
-      <div>
-        <labell for='password'class='block text-gray-700 text-sm font-bold mb-2'> Password:</labell>
-        <input type='password' id="password" name="password" value={formValues.password} onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
-        {formErrors.password&&(
-            <p className='text-red-500 text-sm mt-1'>{formErrors.password}</p>
-        )}
-      </div>
-      <div>
-        <labell for='cnfrm_password'class='block text-gray-700 text-sm font-bold mb-2'>Confirm Password:</labell>
-        <input type='password' id="cnfrm_password" name="cnfrm_password" value={formValues.cnfrm_password}  onChange={handleChange} class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black" ></input>
-        {formErrors.cnfrm_password&&(
-            <p className='text-red-500 text-sm mt-1'>{formErrors.cnfrm_password}</p>
-        )}
-      </div>
-      <button type='submit' class="w-full bg-green-400 text-white py-3 rounded-md mt-5 hover:bg-green-600">SignUp</button>
+  }
 
-        </form>
-        <p class="mt-4 text-center text-sm text-gray-600">
-            Already have an account?
+  function validate() {
+    const errors = {};
+    const specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+    if (!formValues.username) errors.username = 'Username is required';
+    if (!formValues.email) errors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formValues.email)) errors.email = 'Email is invalid';
+
+    if (!formValues.password) errors.password = 'Password is required';
+    else if (formValues.password.length < 8) errors.password = 'Password should contain at least 8 characters';
+    else if (!specialCharacterRegex.test(formValues.password))
+      errors.password = 'Password should contain at least one special character';
+
+    if (formValues.password !== formValues.cnfrm_password) errors.cnfrm_password = 'Passwords do not match';
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  }
+
+  return (
+    <div>
+         <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 w-full absolute top-0 z-50">
+       <div className='w-full max-w-md p-8 bg-white rounded-lg shadow-md'>
+       <h2 class="text-2xl font-bold mb-6 text-center">SignUp</h2>
+     
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={formValues.username}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+          />
+          {formErrors.username && (
+            <p className="text-red-500 text-sm mt-1">{formErrors.username}</p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formValues.email}
+            onChange={handleChange}
+            className="border border-gray-300 w-full outline-none focus:ring-2 focus:ring-gray-500 p-2 rounded-md"
+          />
+          {formErrors.email && (
+            <p className="text-red-500 text-sm mt-1">{formErrors.email}</p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formValues.password}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+          />
+          {formErrors.password && (
+            <p className="text-red-500 text-sm mt-1">{formErrors.password}</p>
+          )}
+        </div>
+
+        <div>
+          <label htmlFor="cnfrm_password" className="block text-gray-700 text-sm font-bold mb-2">Confirm Password:</label>
+          <input
+            type="password"
+            id="cnfrm_password"
+            name="cnfrm_password"
+            value={formValues.cnfrm_password}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
+          />
+          {formErrors.cnfrm_password && (
+            <p className="text-red-500 text-sm mt-1">{formErrors.cnfrm_password}</p>
+          )}
+        </div>
+        <button type='submit' disabled={loading}  className="w-full bg-green-400 text-white py-3 rounded-md mt-5 hover:bg-green-600">{loading ? 'Signing up...' : 'SignUp'}</button>
+        
+    <p class="mt-4 text-center text-sm text-gray-600">
+           Already have an account?
             <Link to='/Login' className='text-blue-600 hover:underline'>Login</Link>
         </p>
-        </div>
-    
+        
+        
+      </form>
+      </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sign
+export default Sign;
+

@@ -6,26 +6,32 @@ import { IoLogOutOutline } from "react-icons/io5";
 
 
 const Admin = () => {
-  const [isAdmin, setIsAdmin] = useState(false);
+  // const [isAdmin, setIsAdmin] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
  
 const navigate=useNavigate()
-  useEffect(() => {
-    FetchUser();
-  }, []);
+//   useEffect(() => {
+//     FetchUser();
+//   }, []);
 
 
-  async function FetchUser() {
-    const userId = localStorage.getItem("id");
-    if (userId) {
-      try {
-        const res = await axios.get(`http://localhost:3001/user/${userId}`);
-        if (res.data?.admin === true)
-           setIsAdmin(true);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    }
+  // async function FetchUser() {
+    // const userId = localStorage.getItem("id");
+    // if (userId) {
+    //   try {
+    //     const res = await axios.get(`http://localhost:3001/user/${userId}`);
+    //     if (res.data?.admin === true)
+    //        setIsAdmin(true);
+    //   } catch (error) {
+    //     console.error("Error fetching user data:", error);
+    //   }
+    // }
+    
+    
+  // }
+  const role=localStorage.getItem('role');
+  if (role!='Admin') {
+    return <div className="flex items-center justify-center h-screen">Unauthorized</div>;
   }
   
   const Data = [
@@ -36,9 +42,7 @@ const navigate=useNavigate()
     { title: "Orders", url: "orders" },
   ];
 
-  if (!isAdmin) {
-    return <div className="flex items-center justify-center h-screen">Unauthorized</div>;
-  }
+  
   function handleLogout(){
     
     const isConfirm=window.confirm("are you sure do you want to Logout")
